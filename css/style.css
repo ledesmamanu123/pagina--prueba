@@ -357,7 +357,8 @@ footer ul li{
     grid-template-areas: 
     "titulo titulo titulo"
     "juegosCarrito juegosCarrito publiCarrito"
-    "juegosCarrito juegosCarrito publiCarrito";
+    "juegosCarrito juegosCarrito publiCarrito"
+    "btnUno btnUno btnDos";
 }
 .titulo-carrito{
     grid-area: titulo;
@@ -368,12 +369,41 @@ footer ul li{
     background-color: #182c41;
     height: 434px;
     width: 894px;
+    margin-left: 50px;
+    margin-bottom: 50px;
 }
 .publi-carrito{
     grid-area: publiCarrito;
     background-color: #3A6EA5;
     height: 434px;
     width: 421px;
+    margin-bottom: 50px;
+    border: 2px solid black;
+}
+.btn-carrito-Dos{
+    grid-area: btnUno;
+    margin-left: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content:flex-start;
+}
+.btn-carrito-Dos button{
+    margin-right: 50px;
+    background: #3A6EA5;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    width: 160px;
+    height: 50px;
+}
+.btn-carrito-Dos button:hover{
+    background-color: #182c41;
+    transition: all 0.5s;
+}
+.btn-carrito{
+    grid-area: btnDos;
+    text-align: center;
+    margin-bottom: 50px;
 }
 .imgSize-carrito{
     height: 152px;
@@ -393,17 +423,20 @@ footer ul li{
     border-right: 2px solid black;
 }
 .caja-juego strong{
+    font-family: 'League Spartan', sans-serif;
     margin-right: 20px;
     font-size: 2rem;
     color: white;
 }
 .caja-totales{
+    background-color: #34485e;
     height: 130px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 .caja-totales strong{
+    font-family: 'League Spartan', sans-serif;
     margin: 20px;
     font-size: 1.8rem;
     color: white;
@@ -473,7 +506,7 @@ footer ul li{
 
 @media (max-width: 480px){
     .titulos{
-        font-size: 2.3rem;
+        font-size: 2.2rem;
     }
     .barra{
         width: 100px;
@@ -552,5 +585,13 @@ footer ul li{
     }
     .parrafo-ayuda{
         display: inline-block;
+    }
+    /* PAGINA CARRITO */
+    .publi-carrito{
+        display: none;
+    }
+    .juegos-carrito{
+        margin: 0;
+        width: 480px;
     }
 }
